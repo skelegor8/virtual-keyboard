@@ -38,6 +38,7 @@ section{
 }
 
 .textarea{
+  
   width: 100%;
   min-height: 300px;
   border: 1px solid var(--silver-pink);
@@ -114,7 +115,7 @@ section{
   &.space{
     width: 380px;
   }
-  &.shift{
+  &.shift-right{
     width: 150px;
   }
   &.enter{
