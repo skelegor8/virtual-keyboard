@@ -5,6 +5,8 @@ const keysJSON = await response.json();
 let keys = keysJSON['keys'];
 
 let language = "en";
+let symbol;
+let span;
 
 let sectionTextArea = document.createElement('section');
 sectionTextArea.className = "text-area";
@@ -25,6 +27,7 @@ document.body.append(sectionKeyboard);
 
 let divKeyboardContainer = document.createElement('div');
 divKeyboardContainer.className = "container";
+divKeyboardContainer.id = "keyboard-container";
 sectionKeyboard.prepend(divKeyboardContainer);
 
 let str1 = document.createElement('div');
@@ -32,95 +35,25 @@ str1.className = "str";
 str1.classList.add('str-1');
 divKeyboardContainer.append(str1);
 
-addBtn(str1, false, keys[0], language);
-addBtn(str1, false, keys[1], language);
-addBtn(str1, false, keys[2], language);
-addBtn(str1, false, keys[3], language);
-addBtn(str1, false, keys[4], language);
-addBtn(str1, false, keys[5], language);
-addBtn(str1, false, keys[6], language);
-addBtn(str1, false, keys[7], language);
-addBtn(str1, false, keys[8], language);
-addBtn(str1, false, keys[9], language);
-addBtn(str1, false, keys[10], language);
-addBtn(str1, false, keys[11], language);
-addBtn(str1, false, keys[12], language);
-addBtn(str1, true, keys[13], language);
-
 let str2 = document.createElement('div');
 str2.className = "str";
 str2.classList.add('str-2');
 divKeyboardContainer.append(str2);
-
-addBtn(str2, true, keys[14], language);
-addBtn(str2, false, keys[15], language);
-addBtn(str2, false, keys[16], language);
-addBtn(str2, false, keys[17], language);
-addBtn(str2, false, keys[18], language);
-addBtn(str2, false, keys[19], language);
-addBtn(str2, false, keys[20], language);
-addBtn(str2, false, keys[21], language);
-addBtn(str2, false, keys[22], language);
-addBtn(str2, false, keys[23], language);
-addBtn(str2, false, keys[24], language);
-addBtn(str2, false, keys[25], language);
-addBtn(str2, false, keys[26], language);
-addBtn(str2, false, keys[27], language);
-addBtn(str2, true, keys[28], language);
 
 let str3 = document.createElement('div');
 str3.className = "str";
 str3.classList.add('str-3');
 divKeyboardContainer.append(str3);
 
-addBtn(str3, true, keys[29], language, "caps-lock");
-addBtn(str3, false, keys[30], language);
-addBtn(str3, false, keys[31], language);
-addBtn(str3, false, keys[32], language);
-addBtn(str3, false, keys[33], language);
-addBtn(str3, false, keys[34], language);
-addBtn(str3, false, keys[35], language);
-addBtn(str3, false, keys[36], language);
-addBtn(str3, false, keys[37], language);
-addBtn(str3, false, keys[38], language);
-addBtn(str3, false, keys[39], language);
-addBtn(str3, false, keys[40], language);
-addBtn(str3, true, keys[41], language, "enter");
-
 let str4 = document.createElement('div');
 str4.className = "str";
 str4.classList.add('str-4');
 divKeyboardContainer.append(str4);
 
-addBtn(str4, true, keys[42], language, "shift-right");
-addBtn(str4, false, keys[43], language);
-addBtn(str4, false, keys[44], language);
-addBtn(str4, false, keys[45], language);
-addBtn(str4, false, keys[46], language);
-addBtn(str4, false, keys[47], language);
-addBtn(str4, false, keys[48], language);
-addBtn(str4, false, keys[49], language);
-addBtn(str4, false, keys[50], language);
-addBtn(str4, false, keys[51], language);
-addBtn(str4, false, keys[52], language);
-addBtn(str4, false, keys[53], language, "up");
-addBtn(str4, true, keys[54], language, "shift-left");
-
-
 let str5 = document.createElement('div');
 str5.className = "str";
 str5.classList.add('str-5');
 divKeyboardContainer.append(str5);
-addBtn(str5, true, keys[55], language, "ctrl-right");
-addBtn(str5, true, keys[56], language, "alt-right");
-addBtn(str5, true, keys[57], language);
-addBtn(str5, true, keys[58], language, "space");
-addBtn(str5, true, keys[59], language, "alt-left");
-addBtn(str5, true, keys[60], language, "ctrl-left");
-addBtn(str5, false, keys[61], language, "left");
-addBtn(str5, false, keys[62], language, "down");
-addBtn(str5, false, keys[63], language, "right");
-
 
 function addBtn(str, fn, id, lang, more) {
   let btn = document.createElement('div');
@@ -189,4 +122,94 @@ function addBtn(str, fn, id, lang, more) {
       span.innerHTML = id.content;
     }
   }
+}
+
+drawKeyboard();
+
+function langKeyboard() {
+  str1.innerHTML = "";
+  str2.innerHTML = "";
+  str3.innerHTML = "";
+  str4.innerHTML = "";
+  str5.innerHTML = "";
+  drawKeyboard();
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.shiftKey && event.altKey) {
+    if (language == "en") {
+      language = "ru";
+    } else {
+      language = "en";
+    }
+    langKeyboard();
+    console.log(language);
+  }
+});
+
+function drawKeyboard() {
+  addBtn(str1, false, keys[0], language);
+  addBtn(str1, false, keys[1], language);
+  addBtn(str1, false, keys[2], language);
+  addBtn(str1, false, keys[3], language);
+  addBtn(str1, false, keys[4], language);
+  addBtn(str1, false, keys[5], language);
+  addBtn(str1, false, keys[6], language);
+  addBtn(str1, false, keys[7], language);
+  addBtn(str1, false, keys[8], language);
+  addBtn(str1, false, keys[9], language);
+  addBtn(str1, false, keys[10], language);
+  addBtn(str1, false, keys[11], language);
+  addBtn(str1, false, keys[12], language);
+  addBtn(str1, true, keys[13], language);
+  addBtn(str2, true, keys[14], language);
+  addBtn(str2, false, keys[15], language);
+  addBtn(str2, false, keys[16], language);
+  addBtn(str2, false, keys[17], language);
+  addBtn(str2, false, keys[18], language);
+  addBtn(str2, false, keys[19], language);
+  addBtn(str2, false, keys[20], language);
+  addBtn(str2, false, keys[21], language);
+  addBtn(str2, false, keys[22], language);
+  addBtn(str2, false, keys[23], language);
+  addBtn(str2, false, keys[24], language);
+  addBtn(str2, false, keys[25], language);
+  addBtn(str2, false, keys[26], language);
+  addBtn(str2, false, keys[27], language);
+  addBtn(str2, true, keys[28], language);
+  addBtn(str3, true, keys[29], language, "caps-lock");
+  addBtn(str3, false, keys[30], language);
+  addBtn(str3, false, keys[31], language);
+  addBtn(str3, false, keys[32], language);
+  addBtn(str3, false, keys[33], language);
+  addBtn(str3, false, keys[34], language);
+  addBtn(str3, false, keys[35], language);
+  addBtn(str3, false, keys[36], language);
+  addBtn(str3, false, keys[37], language);
+  addBtn(str3, false, keys[38], language);
+  addBtn(str3, false, keys[39], language);
+  addBtn(str3, false, keys[40], language);
+  addBtn(str3, true, keys[41], language, "enter");
+  addBtn(str4, true, keys[42], language, "shift-right");
+  addBtn(str4, false, keys[43], language);
+  addBtn(str4, false, keys[44], language);
+  addBtn(str4, false, keys[45], language);
+  addBtn(str4, false, keys[46], language);
+  addBtn(str4, false, keys[47], language);
+  addBtn(str4, false, keys[48], language);
+  addBtn(str4, false, keys[49], language);
+  addBtn(str4, false, keys[50], language);
+  addBtn(str4, false, keys[51], language);
+  addBtn(str4, false, keys[52], language);
+  addBtn(str4, false, keys[53], language, "up");
+  addBtn(str4, true, keys[54], language, "shift-left");
+  addBtn(str5, true, keys[55], language, "ctrl-right");
+  addBtn(str5, true, keys[56], language, "alt-right");
+  addBtn(str5, true, keys[57], language);
+  addBtn(str5, true, keys[58], language, "space");
+  addBtn(str5, true, keys[59], language, "alt-left");
+  addBtn(str5, true, keys[60], language, "ctrl-left");
+  addBtn(str5, false, keys[61], language, "left");
+  addBtn(str5, false, keys[62], language, "down");
+  addBtn(str5, false, keys[63], language, "right");
 }
