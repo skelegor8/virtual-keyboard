@@ -33,12 +33,15 @@ section{
 }
 
 .container{
-  width: 1200px;
+  width: 950px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .textarea{
-  
   width: 100%;
   min-height: 300px;
   border: 1px solid var(--silver-pink);
@@ -47,12 +50,6 @@ section{
   padding: 10px;
 }
 
-.str{
-  width: 950px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
 
 .btn{
   position: relative;
@@ -113,7 +110,7 @@ section{
     position: static;
   }
   &.space{
-    width: 380px;
+    width: 330px;
   }
   &.shift-right{
     width: 150px;

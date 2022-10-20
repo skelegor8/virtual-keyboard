@@ -30,32 +30,8 @@ divKeyboardContainer.className = "container";
 divKeyboardContainer.id = "keyboard-container";
 sectionKeyboard.prepend(divKeyboardContainer);
 
-let str1 = document.createElement('div');
-str1.className = "str";
-str1.classList.add('str-1');
-divKeyboardContainer.append(str1);
 
-let str2 = document.createElement('div');
-str2.className = "str";
-str2.classList.add('str-2');
-divKeyboardContainer.append(str2);
-
-let str3 = document.createElement('div');
-str3.className = "str";
-str3.classList.add('str-3');
-divKeyboardContainer.append(str3);
-
-let str4 = document.createElement('div');
-str4.className = "str";
-str4.classList.add('str-4');
-divKeyboardContainer.append(str4);
-
-let str5 = document.createElement('div');
-str5.className = "str";
-str5.classList.add('str-5');
-divKeyboardContainer.append(str5);
-
-function addBtn(str, fn, id, lang, more) {
+function addBtn(fn, id, lang, more) {
   let btn = document.createElement('div');
   btn.className = "btn";
   if (fn == true) {
@@ -80,20 +56,26 @@ function addBtn(str, fn, id, lang, more) {
       btn.classList.add('alt-right');
     } else if (more == "alt-left") {
       btn.classList.add('alt-left');
+    } else if (more == "backspace") {
+      btn.classList.add("backspace");
+    } else if (more == "tab") {
+      btn.classList.add("tab");
+    } else if (more == "del") {
+      btn.classList.add("del");
+    } else if (more == "win") {
+      btn.classList.add("win");
     }
   }
   if (more == "up") {
     btn.classList.add("up");
   } else if (more == "down") {
     btn.classList.add("down");
-  }
-  else if (more == "right") {
+  } else if (more == "right") {
     btn.classList.add("right");
-  }
-  else if (more == "left") {
+  } else if (more == "left") {
     btn.classList.add("left");
-  }
-  str.append(btn);
+  } 
+  divKeyboardContainer.append(btn);
 
   if (fn == false) {
     let symbol = document.createElement('span');
@@ -127,16 +109,12 @@ function addBtn(str, fn, id, lang, more) {
 drawKeyboard();
 
 function langKeyboard() {
-  str1.innerHTML = "";
-  str2.innerHTML = "";
-  str3.innerHTML = "";
-  str4.innerHTML = "";
-  str5.innerHTML = "";
+  divKeyboardContainer.innerHTML = "";
   drawKeyboard();
 }
 
 document.addEventListener('keydown', function(event) {
-  if (event.shiftKey && event.altKey) {
+  if (event.shiftKey) {
     if (language == "en") {
       language = "ru";
     } else {
@@ -148,68 +126,48 @@ document.addEventListener('keydown', function(event) {
 });
 
 function drawKeyboard() {
-  addBtn(str1, false, keys[0], language);
-  addBtn(str1, false, keys[1], language);
-  addBtn(str1, false, keys[2], language);
-  addBtn(str1, false, keys[3], language);
-  addBtn(str1, false, keys[4], language);
-  addBtn(str1, false, keys[5], language);
-  addBtn(str1, false, keys[6], language);
-  addBtn(str1, false, keys[7], language);
-  addBtn(str1, false, keys[8], language);
-  addBtn(str1, false, keys[9], language);
-  addBtn(str1, false, keys[10], language);
-  addBtn(str1, false, keys[11], language);
-  addBtn(str1, false, keys[12], language);
-  addBtn(str1, true, keys[13], language);
-  addBtn(str2, true, keys[14], language);
-  addBtn(str2, false, keys[15], language);
-  addBtn(str2, false, keys[16], language);
-  addBtn(str2, false, keys[17], language);
-  addBtn(str2, false, keys[18], language);
-  addBtn(str2, false, keys[19], language);
-  addBtn(str2, false, keys[20], language);
-  addBtn(str2, false, keys[21], language);
-  addBtn(str2, false, keys[22], language);
-  addBtn(str2, false, keys[23], language);
-  addBtn(str2, false, keys[24], language);
-  addBtn(str2, false, keys[25], language);
-  addBtn(str2, false, keys[26], language);
-  addBtn(str2, false, keys[27], language);
-  addBtn(str2, true, keys[28], language);
-  addBtn(str3, true, keys[29], language, "caps-lock");
-  addBtn(str3, false, keys[30], language);
-  addBtn(str3, false, keys[31], language);
-  addBtn(str3, false, keys[32], language);
-  addBtn(str3, false, keys[33], language);
-  addBtn(str3, false, keys[34], language);
-  addBtn(str3, false, keys[35], language);
-  addBtn(str3, false, keys[36], language);
-  addBtn(str3, false, keys[37], language);
-  addBtn(str3, false, keys[38], language);
-  addBtn(str3, false, keys[39], language);
-  addBtn(str3, false, keys[40], language);
-  addBtn(str3, true, keys[41], language, "enter");
-  addBtn(str4, true, keys[42], language, "shift-right");
-  addBtn(str4, false, keys[43], language);
-  addBtn(str4, false, keys[44], language);
-  addBtn(str4, false, keys[45], language);
-  addBtn(str4, false, keys[46], language);
-  addBtn(str4, false, keys[47], language);
-  addBtn(str4, false, keys[48], language);
-  addBtn(str4, false, keys[49], language);
-  addBtn(str4, false, keys[50], language);
-  addBtn(str4, false, keys[51], language);
-  addBtn(str4, false, keys[52], language);
-  addBtn(str4, false, keys[53], language, "up");
-  addBtn(str4, true, keys[54], language, "shift-left");
-  addBtn(str5, true, keys[55], language, "ctrl-right");
-  addBtn(str5, true, keys[56], language, "alt-right");
-  addBtn(str5, true, keys[57], language);
-  addBtn(str5, true, keys[58], language, "space");
-  addBtn(str5, true, keys[59], language, "alt-left");
-  addBtn(str5, true, keys[60], language, "ctrl-left");
-  addBtn(str5, false, keys[61], language, "left");
-  addBtn(str5, false, keys[62], language, "down");
-  addBtn(str5, false, keys[63], language, "right");
+  for (let i = 0; i < keys.length; i++){
+    if (i == 13) {addBtn(true, keys[i], language, "backspace");
+    } else if (i == 14) {
+      addBtn(true, keys[i], language, "tab"); 
+    }else if (i == 28) {
+      addBtn(true, keys[i], language, "del");
+    }else if (i == 29) {
+      addBtn(true, keys[i], language, "caps-lock");
+    }else if (i == 41) {
+      addBtn(true, keys[i], language, "enter");
+    }else if (i == 42) {
+      addBtn(true, keys[i], language, "shift-right");
+    }else if (i == 53) {
+      addBtn(false, keys[i], language, "up");
+    }else if (i == 54) {
+      addBtn(true, keys[i], language, "shift-left");
+    }else if (i == 55) {
+      addBtn(true, keys[i], language, "ctrl-right");
+    }else if (i == 56) {
+      addBtn(true, keys[i], language, "win");
+    }else if (i == 57) {
+      addBtn(true, keys[i], language, "alt-right");
+    }else if (i == 58) {
+      addBtn(true, keys[i], language, "space");
+    }else if (i == 59) {
+      addBtn(true, keys[i], language, "alt-left");
+    }else if (i == 60) {
+      addBtn(true, keys[i], language, "ctrl-left");
+    }else if (i == 61) {
+      addBtn(false, keys[i], language, "left");
+    }else if (i == 62) {
+      addBtn(false, keys[i], language, "down");
+    }else if (i == 63) {
+      addBtn(false, keys[i], language, "right");
+    } else {addBtn(false, keys[i], language);}
+  }
 }
+
+const btns = document.querySelectorAll(".btn");
+
+btns.forEach(btn => {
+  btn.addEventListener("click", {
+    
+  })
+})

@@ -7,6 +7,7 @@
 }
 
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -91,8 +92,12 @@ section {
 }
 
 .container {
-  width: 1200px;
+  width: 950px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .textarea {
@@ -100,20 +105,8 @@ section {
   min-height: 300px;
   border: 1px solid var(--silver-pink);
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 8px var(--silver-pink);
-          box-shadow: 0px 0px 8px var(--silver-pink);
+  box-shadow: 0px 0px 8px var(--silver-pink);
   padding: 10px;
-}
-
-.str {
-  width: 950px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .btn {
@@ -125,11 +118,9 @@ section {
   margin: 5px;
   border: 2px outset var(--silver-pink);
   border-radius: 7px;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 .btn:hover {
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   background-color: var(--linen);
 }
@@ -137,21 +128,16 @@ section {
   color: var(--dark-lava);
 }
 .btn:active {
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   border: 2px inset var(--silver-pink);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
 .btn.active {
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   background-color: var(--linen);
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   border: 2px inset var(--silver-pink);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
 .btn.active .content {
   color: var(--dark-lava);
@@ -162,7 +148,6 @@ section {
   margin: 14px 17px;
   color: var(--linen);
   font-size: 20px;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 .content.symbol {
@@ -175,22 +160,16 @@ section {
 .fn-btn {
   background-color: var(--dark-lava);
   width: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .fn-btn .content {
   margin: 0 15px;
   position: static;
 }
 .fn-btn.space {
-  width: 380px;
+  width: 330px;
 }
 .fn-btn.shift-right {
   width: 150px;
