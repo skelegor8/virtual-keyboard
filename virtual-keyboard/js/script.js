@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable no-plusplus */
 const requestURL = './js/keys.json';
 const request = new Request(requestURL);
@@ -28,6 +29,8 @@ const divKeyboardContainer = document.createElement('div');
 divKeyboardContainer.className = 'container';
 divKeyboardContainer.id = 'keyboard-container';
 sectionKeyboard.prepend(divKeyboardContainer);
+
+let btns;
 
 function addBtn(fn, id, lang, more) {
   const btn = document.createElement('div');
@@ -75,8 +78,7 @@ function addBtn(fn, id, lang, more) {
 
   if (fn === false) {
     const symbol = document.createElement('span');
-    symbol.className = 'content';
-    symbol.classList.add('symbol');
+    symbol.className = 'content-symbol';
     btn.append(symbol);
     const span = document.createElement('span');
     span.className = 'content';
@@ -141,6 +143,7 @@ function drawKeyboard() {
       addBtn(false, keys[i], language);
     }
   }
+  btns = document.querySelectorAll('.btn');
 }
 
 drawKeyboard();
@@ -148,6 +151,7 @@ drawKeyboard();
 function langKeyboard() {
   divKeyboardContainer.innerHTML = '';
   drawKeyboard();
+  btns = document.querySelectorAll('.btn');
 }
 
 document.addEventListener('keydown', (event) => {
@@ -162,10 +166,32 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-const btns = document.querySelectorAll('.btn');
-
-btns.forEach((btn) => {
-  btn.addEventListener('click', {
-
+for (const btn of btns) {
+  btn.addEventListener('click', (event) => {
+    if (event.target.classList.contains('fn-btn')) {
+      textarea.innerHTML += btn.children[0].innerHTML.toLocaleLowerCase();
+    } else {
+      textarea.innerHTML += btn.children[1].innerHTML.toLocaleLowerCase();
+    }
   });
+}
+
+document.body.addEventListener('keydown', (index) => {
+  for (const btn of btns) {
+    for (const item of btn.children) {
+      if (item.innerHTML.toLocaleLowerCase() === index.key.toLocaleLowerCase()) {
+        btn.classList.add('active');
+      }
+    }
+  }
+});
+
+document.body.addEventListener('keyup', (index) => {
+  for (const btn of btns) {
+    for (const item of btn.children) {
+      if (item.innerHTML.toLocaleLowerCase() === index.key.toLocaleLowerCase()) {
+        btn.classList.remove('active');
+      }
+    }
+  }
 });

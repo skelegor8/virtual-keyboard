@@ -127,6 +127,9 @@ section {
 .btn:hover .content {
   color: var(--dark-lava);
 }
+.btn:hover .content-symbol {
+  color: var(--dark-lava);
+}
 .btn:active {
   transition: 0.3s ease;
   border: 2px inset var(--silver-pink);
@@ -135,11 +138,13 @@ section {
 .btn.active {
   transition: 0.3s ease;
   background-color: var(--linen);
-  transition: 0.2s ease;
   border: 2px inset var(--silver-pink);
   transform: scale(0.95);
 }
 .btn.active .content {
+  color: var(--dark-lava);
+}
+.btn.active .content-symbol {
   color: var(--dark-lava);
 }
 
@@ -150,7 +155,13 @@ section {
   font-size: 20px;
   transition: 0.3s ease;
 }
-.content.symbol {
+
+.content-symbol {
+  display: block;
+  margin: 14px 17px;
+  color: var(--linen);
+  font-size: 20px;
+  transition: 0.3s ease;
   position: absolute;
   margin: 0;
   top: 1px;
