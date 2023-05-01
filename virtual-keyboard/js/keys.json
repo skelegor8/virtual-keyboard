@@ -1,0 +1,388 @@
+{
+  "keys":[
+  {
+    "symbol": "~",
+    "symbolRu": "",
+    "content": "`",
+    "contentRu": "Ё"
+  },
+  {
+    "symbol": "!",
+    "symbolRu": "!",
+    "content": "1",
+    "contentRu": "1"
+  },
+  {
+    "symbol": "@",
+    "symbolRu": "\"",
+    "content": "2",
+    "contentRu": "2"
+  },
+  {
+    "symbol": "#",
+    "symbolRu": "№",
+    "content": "3",
+    "contentRu": "3"
+  },
+  {
+    "symbol": "$",
+    "symbolRu": ";",
+    "content": "4",
+    "contentRu": "4"
+  },
+  {
+    "symbol": "%",
+    "symbolRu": "%",
+    "content": "5",
+    "contentRu": "5"
+  },
+  {
+    "symbol": "^",
+    "symbolRu": ":",
+    "content": "6",
+    "contentRu": "6"
+  },
+  {
+    "symbol": "&",
+    "symbolRu": "?",
+    "content": "7",
+    "contentRu": "7"
+  },
+  {
+    "symbol": "*",
+    "symbolRu": "*",
+    "content": "8",
+    "contentRu": "8"
+  },
+  {
+    "symbol": "(",
+    "symbolRu": "(",
+    "content": "9",
+    "contentRu": "9"
+  },
+  {
+    "symbol": ")",
+    "symbolRu": ")",
+    "content": "0",
+    "contentRu": "0"
+  },
+  {
+    "symbol": "_",
+    "symbolRu": "_",
+    "content": "-",
+    "contentRu": "-"
+  },
+  {
+    "symbol": "+",
+    "symbolRu": "+",
+    "content": "=",
+    "contentRu": "="
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Backspace",
+    "contentRu": "Backspace"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Tab",
+    "contentRu": "Tab"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Q",
+    "contentRu": "Й"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "W",
+    "contentRu": "Ц"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "E",
+    "contentRu": "У"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "R",
+    "contentRu": "К"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "T",
+    "contentRu": "Е"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Y",
+    "contentRu": "Н"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "U",
+    "contentRu": "Г"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "I",
+    "contentRu": "Ш"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "O",
+    "contentRu": "Щ"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "P",
+    "contentRu": "З"
+  },
+  {
+    "symbol": "{",
+    "symbolRu": "",
+    "content": "[",
+    "contentRu": "Х"
+  },
+  {
+    "symbol": "}",
+    "symbolRu": "",
+    "content": "]",
+    "contentRu": "Ъ"
+  },
+  {
+    "symbol": "|",
+    "symbolRu": "/",
+    "content": "\\",
+    "contentRu": "\\"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Del",
+    "contentRu": "Del"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Caps Lock",
+    "contentRu": "Caps Lock"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "A",
+    "contentRu": "Ф"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "S",
+    "contentRu": "Ы"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "D",
+    "contentRu": "В"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "F",
+    "contentRu": "А"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "G",
+    "contentRu": "П"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "H",
+    "contentRu": "Р"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "J",
+    "contentRu": "О"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "K",
+    "contentRu": "Л"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "L",
+    "contentRu": "Д"
+  },
+  {
+    "symbol": ":",
+    "symbolRu": "",
+    "content": ";",
+    "contentRu": "Ж"
+  },
+  {
+    "symbol": "\"",
+    "symbolRu": "",
+    "content": "'",
+    "contentRu": "Э"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Enter",
+    "contentRu": "Enter"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Shift",
+    "contentRu": "Shift"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Z",
+    "contentRu": "Я"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "X",
+    "contentRu": "Ч"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "C",
+    "contentRu": "С"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "V",
+    "contentRu": "М"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "B",
+    "contentRu": "И"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "N",
+    "contentRu": "Т"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "M",
+    "contentRu": "Ь"
+  },
+  {
+    "symbol": "<",
+    "symbolRu": "",
+    "content": ",",
+    "contentRu": "Б"
+  },
+  {
+    "symbol": ">",
+    "symbolRu": "",
+    "content": ".",
+    "contentRu": "Ю"
+  },
+  {
+    "symbol": "?",
+    "symbolRu": ",",
+    "content": "/",
+    "contentRu": "."
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "🡱",
+    "contentRu": "🡱"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Shift",
+    "contentRu": "Shift"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Ctrl",
+    "contentRu": "Ctrl"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Win",
+    "contentRu": "Win"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Alt",
+    "contentRu": "Alt"
+  },
+  {
+    "symbol": " ",
+    "symbolRu": " ",
+    "content": " ",
+    "contentRu": " "
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Alt",
+    "contentRu": "Alt"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "Ctrl",
+    "contentRu": "Ctrl"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "🡰",
+    "contentRu": "🡰"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "🡳",
+    "contentRu": "🡳"
+  },
+  {
+    "symbol": "",
+    "symbolRu": "",
+    "content": "🡲",
+    "contentRu": "🡲"
+  }
+]
+}
