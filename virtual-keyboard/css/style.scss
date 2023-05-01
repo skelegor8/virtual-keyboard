@@ -50,6 +50,20 @@ section{
   padding: 10px;
 }
 
+.keyboard{
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  align-items: center;
+}
+.text-info{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--dark-lava);
+}
 
 .btn{
   position: relative;

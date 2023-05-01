@@ -148,10 +148,15 @@ function drawKeyboard() {
 
 drawKeyboard();
 
+const textInfo = document.createElement('div');
+textInfo.className = 'text-info';
+sectionKeyboard.append(textInfo);
+
+textInfo.innerHTML = '<p>Клавиатура создана в операционной системе Linux</p><p>Для переключения языка комбинация: левыe shift + ctrl</p>';
+
 function langKeyboard() {
   divKeyboardContainer.innerHTML = '';
   drawKeyboard();
-  btns = document.querySelectorAll('.btn');
 }
 
 document.addEventListener('keydown', (event) => {
@@ -166,15 +171,23 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-for (const btn of btns) {
-  btn.addEventListener('click', (event) => {
-    if (event.target.classList.contains('fn-btn')) {
-      textarea.innerHTML += btn.children[0].innerHTML.toLocaleLowerCase();
-    } else {
-      textarea.innerHTML += btn.children[1].innerHTML.toLocaleLowerCase();
-    }
-  });
-}
+divContainer.addEventListener('click', () => {
+  for (const btn of btns) {
+    btn.addEventListener('click', (event) => {
+      if (event.target.classList.contains('fn-btn')) {
+        if (event.target.classList.contains('space')) {
+          textarea.innerHTML += btn.children[btn.children.length - 1].innerHTML.toLocaleLowerCase();
+        } else if (event.target.classList.contains('backspace')) {
+          textarea.innerHTML = textarea.innerHTML.slice(0, -1);
+        } else {
+          textarea.innerHTML += '';
+        }
+      } else if (event.target.classList.contains('btn')) {
+        textarea.innerHTML += btn.children[btn.children.length - 1].innerHTML.toLocaleLowerCase();
+      }
+    });
+  }
+});
 
 document.body.addEventListener('keydown', (index) => {
   for (const btn of btns) {
@@ -194,4 +207,10 @@ document.body.addEventListener('keyup', (index) => {
       }
     }
   }
+});
+
+const enter = document.querySelector('.enter');
+
+enter.addEventListener('click', () => {
+  textarea.innerHTML += '\n';
 });
